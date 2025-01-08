@@ -1,6 +1,6 @@
 {
   "name": "gameforge",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A lightweight HTML5 game prototyping boilerplate that provides the essential structure and tools to quickly build and test 2D game ideas.",
   "keywords": [
     "lightweight",
