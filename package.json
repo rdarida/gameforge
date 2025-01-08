@@ -1,0 +1,38 @@
+{
+  "name": "gameforge",
+  "version": "0.0.0",
+  "description": "A lightweight HTML5 game prototyping boilerplate that provides the essential structure and tools to quickly build and test 2D game ideas.",
+  "keywords": [
+    "lightweight",
+    "boilerplate",
+    "html5",
+    "2d-game",
+    "game-prototyping"
+  ],
+  "license": "MIT",
+  "author": "Róbert Darida",
+  "homepage": "https://github.com/rdarida/gameforge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdarida/gameforge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rdarida/gameforge/issues"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "tsc",
+    "prebuild": "rimraf dist",
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
