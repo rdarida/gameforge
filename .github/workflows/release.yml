@@ -18,8 +18,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Set up NodeJS
         uses: actions/setup-node@v4
@@ -38,31 +36,11 @@ jobs:
       - name: Test
         run: |
           npm run lint
-          npm test -- --collectCoverage
+          npm test
 
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-      - name: Publish
+      - name: Release and publish
         run: |
           npm run release
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
-
-      - name: Generate documentation
-        run: npm run docs
-
-      - name: Move coverage into docs
-        run: mv coverage/lcov-report docs/coverage
-
-      - name: Deploy documentation
-        uses: rdarida/simple-github-pages-deploy-action@v1
-        with:
-          git-user: 'github-actions[bot]'
-          git-email: 'github-actions[bot]@users.noreply.github.com'
-          git-base-folder: 'docs'
-          commit-message: 'Automatic deploy'
