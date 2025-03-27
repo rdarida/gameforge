@@ -1,7 +1,7 @@
 {
   "name": "gameforge",
   "version": "0.0.2",
-  "description": "A lightweight HTML5 game prototyping boilerplate that provides the essential structure and tools to quickly build and test 2D game ideas.",
+  "description": "Lightweight HTML5 boilerplate for quick 2D game prototyping",
   "keywords": [
     "lightweight",
     "boilerplate",
@@ -23,20 +23,20 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "./dist"
   ],
   "scripts": {
     "lint": "tsc",
     "prettier": "prettier . --check",
-    "pretest": "rimraf coverage",
+    "pretest": "rimraf ./coverage",
     "test": "jest",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf ./dist",
     "build": "tsup src/index.ts --format cjs,esm --dts --minify",
     "prepublishOnly": "npm run build",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin HEAD",
-    "predocs": "rimraf docs",
-    "docs": "typedoc --out docs src"
+    "predocs": "rimraf ./docs",
+    "docs": "typedoc"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
