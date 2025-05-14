@@ -1,11 +1,15 @@
-import { greet } from '../src/index';
+import { Flow, greet } from '../src/index';
 
 describe('Test index.ts', () => {
-  test('greet function should be exported', () => {
+  it('should export Flow class', () => {
+    expect(Flow).toBeTruthy();
+  });
+
+  it('should export greet function', () => {
     expect(greet).toBeTruthy();
   });
 
-  test('should greet', () => {
+  it('should greet', () => {
     expect(greet()).toBe('Hello, gameforge!');
   });
 });
