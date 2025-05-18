@@ -1,6 +1,6 @@
 {
   "name": "gameforge",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lightweight HTML5 boilerplate for quick 2D game prototyping",
   "keywords": [
     "lightweight",
@@ -37,6 +37,9 @@
     "postrelease": "git push --follow-tags origin HEAD",
     "predocs": "rimraf ./docs",
     "docs": "typedoc"
+  },
+  "dependencies": {
+    "pixi.js": "^7.4.3"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
