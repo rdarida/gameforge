@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/rdarida/gameforge/compare/v0.0.9...v0.0.10) (2025-05-21)
+
+
+### Features
+
+* implement Game class ([bbf7e3b](https://github.com/rdarida/gameforge/commit/bbf7e3b994ec26db3f4be01fc872fba8c04cf8e7))
+
 ### [0.0.9](https://github.com/rdarida/gameforge/compare/v0.0.8...v0.0.9) (2025-05-21)
 
 
