@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/rdarida/gameforge/compare/v0.0.6...v0.0.7) (2025-05-21)
+
+
+### Features
+
+* implement Button class ([a75c188](https://github.com/rdarida/gameforge/commit/a75c188388cb7ae29227979e9336cb22806f1e7e))
+
 ### [0.0.6](https://github.com/rdarida/gameforge/compare/v0.0.5...v0.0.6) (2025-05-18)
 
 
