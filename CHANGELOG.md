@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/rdarida/gameforge/compare/v0.0.6...v0.0.8) (2025-05-21)
+
+
+### Bug Fixes
+
+* lock pixi.js version ([02497f6](https://github.com/rdarida/gameforge/commit/02497f6c91dc9ecb7357f3bc4ebc3d82aaa4cdb6))
+
+### [0.0.7](https://github.com/rdarida/gameforge/compare/v0.0.6...v0.0.7) (2025-05-21)
+
+
+### Bug Fixes
+
+* lock pixi.js version ([02497f6](https://github.com/rdarida/gameforge/commit/02497f6c91dc9ecb7357f3bc4ebc3d82aaa4cdb6))
+
 ### [0.0.6](https://github.com/rdarida/gameforge/compare/v0.0.5...v0.0.6) (2025-05-18)
 
 
