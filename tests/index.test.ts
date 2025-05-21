@@ -1,4 +1,4 @@
-import { Button, Flow } from '../src/index';
+import { Button, Flow, Game } from '../src/index';
 
 describe('Test index.ts', () => {
   it('should export Button class', () => {
@@ -7,5 +7,9 @@ describe('Test index.ts', () => {
 
   it('should export Flow class', () => {
     expect(Flow).toBeTruthy();
+  });
+
+  it('should export Game class', () => {
+    expect(Game).toBeTruthy();
   });
 });
