@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/rdarida/gameforge/compare/v0.0.10...v0.0.11) (2025-05-21)
+
+
+### Features
+
+* add options parameter to Game constructor ([275d79e](https://github.com/rdarida/gameforge/commit/275d79e392e36c2967162c3567ef12558d5a7c3f))
+
 ### [0.0.10](https://github.com/rdarida/gameforge/compare/v0.0.9...v0.0.10) (2025-05-21)
 
 
