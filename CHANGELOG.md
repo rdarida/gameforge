@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/rdarida/gameforge/compare/v0.0.11...v0.0.12) (2025-05-22)
+
+
+### Bug Fixes
+
+* use eventMode instead of interactive property in Button ([621d96e](https://github.com/rdarida/gameforge/commit/621d96e00ffc7fff9422c488c81b1064923b5a58))
+
 ### [0.0.11](https://github.com/rdarida/gameforge/compare/v0.0.10...v0.0.11) (2025-05-21)
 
 
