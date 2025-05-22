@@ -26,12 +26,12 @@ export class Button extends Sprite {
   }
 
   public enable(): void {
-    this.interactive = true;
+    this.eventMode = 'static';
     this.cursor = 'pointer';
   }
 
   public disable(): void {
-    this.interactive = false;
+    this.eventMode = 'none';
     this.cursor = '';
   }
 }
