@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.18](https://github.com/rdarida/gameforge/compare/v0.0.17...v0.0.18) (2025-05-23)
+
+
+### Features
+
+* export Pixi.Assets via wrapper ([4cfd231](https://github.com/rdarida/gameforge/commit/4cfd231cef67a8c9432bbd4db9239018664d29dd))
+
 ### [0.0.17](https://github.com/rdarida/gameforge/compare/v0.0.16...v0.0.17) (2025-05-23)
 
 

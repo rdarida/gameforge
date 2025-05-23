@@ -1,4 +1,5 @@
 import * as Pixi from 'pixi.js';
+export { Assets } from 'pixi.js';
 
 export class AnimatedSprite extends Pixi.AnimatedSprite {}
 
