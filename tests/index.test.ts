@@ -1,5 +1,6 @@
 import {
   AnimatedSprite,
+  Assets,
   Button,
   FederatedPointerEvent,
   Flow,
@@ -17,6 +18,10 @@ import {
 describe('Test index.ts', () => {
   it('should export AnimatedSprite class', () => {
     expect(AnimatedSprite).toBeTruthy();
+  });
+
+  it('should export Assets class', () => {
+    expect(Assets).toBeTruthy();
   });
 
   it('should export Button class', () => {
