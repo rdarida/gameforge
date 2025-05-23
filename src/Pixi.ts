@@ -3,6 +3,8 @@ export { Assets } from 'pixi.js';
 
 export class AnimatedSprite extends Pixi.AnimatedSprite {}
 
+export class Container extends Pixi.Container {}
+
 export class FederatedPointerEvent extends Pixi.FederatedPointerEvent {}
 
 export class Graphics extends Pixi.Graphics {}
