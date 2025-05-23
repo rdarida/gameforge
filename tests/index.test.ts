@@ -10,6 +10,7 @@ import {
   Sprite,
   Text,
   Texture,
+  TextStyle,
   Ticker
 } from '../src/index';
 
@@ -56,6 +57,10 @@ describe('Test index.ts', () => {
 
   it('should export Texture class', () => {
     expect(Texture).toBeTruthy();
+  });
+
+  it('should export TextStyle class', () => {
+    expect(TextStyle).toBeTruthy();
   });
 
   it('should export Ticker class', () => {

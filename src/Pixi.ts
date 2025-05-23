@@ -16,4 +16,6 @@ export class Text extends Pixi.Text {}
 
 export class Texture extends Pixi.Texture {}
 
+export class TextStyle extends Pixi.TextStyle {}
+
 export class Ticker extends Pixi.Ticker {}
