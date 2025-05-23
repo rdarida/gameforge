@@ -1,16 +1,29 @@
 import {
+  AnimatedSprite,
   Button,
+  FederatedPointerEvent,
   Flow,
   Game,
   Graphics,
+  NineSlicePlane,
+  Rectangle,
   Sprite,
   Text,
-  Texture
+  Texture,
+  Ticker
 } from '../src/index';
 
 describe('Test index.ts', () => {
+  it('should export AnimatedSprite class', () => {
+    expect(AnimatedSprite).toBeTruthy();
+  });
+
   it('should export Button class', () => {
     expect(Button).toBeTruthy();
+  });
+
+  it('should export FederatedPointerEvent class', () => {
+    expect(FederatedPointerEvent).toBeTruthy();
   });
 
   it('should export Flow class', () => {
@@ -25,6 +38,14 @@ describe('Test index.ts', () => {
     expect(Graphics).toBeTruthy();
   });
 
+  it('should export NineSlicePlane class', () => {
+    expect(NineSlicePlane).toBeTruthy();
+  });
+
+  it('should export Rectangle class', () => {
+    expect(Rectangle).toBeTruthy();
+  });
+
   it('should export Sprite class', () => {
     expect(Sprite).toBeTruthy();
   });
@@ -35,5 +56,9 @@ describe('Test index.ts', () => {
 
   it('should export Texture class', () => {
     expect(Texture).toBeTruthy();
+  });
+
+  it('should export Ticker class', () => {
+    expect(Ticker).toBeTruthy();
   });
 });
