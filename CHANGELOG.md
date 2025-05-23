@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.17](https://github.com/rdarida/gameforge/compare/v0.0.16...v0.0.17) (2025-05-23)
+
+
+### Features
+
+* add TextStyle wrapper ([54d9924](https://github.com/rdarida/gameforge/commit/54d9924e6da7e40cbf10d28cd8f560ca7cccdfb3))
+
 ### [0.0.16](https://github.com/rdarida/gameforge/compare/v0.0.15...v0.0.16) (2025-05-23)
 
 
