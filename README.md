@@ -1,4 +1,4 @@
-<img src="https://repository-images.githubusercontent.com/913811529/e7b33581-2614-4cb4-825a-12a498f2ff1d" alt="Cover" />
+<img src="https://repository-images.githubusercontent.com/1047834015/b6547cd4-f329-42d5-a481-cae5b7debfbc" alt="Cover" />
 
 <p align="center">
   <a href="https://npmjs.com/package/gameforge/" target="_blank" alt="NPM" >
