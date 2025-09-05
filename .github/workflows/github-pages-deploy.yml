@@ -39,10 +39,10 @@ jobs:
       - name: Test
         run: npm test -- --collectCoverage
 
-      # - name: SonarQube Scan
-      #   uses: SonarSource/sonarqube-scan-action@v5.3.1
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5.3.1
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Generate documentation
         run: npm run docs
