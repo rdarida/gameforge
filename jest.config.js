@@ -3,6 +3,7 @@ const { defaults } = require('jest-config');
 module.exports = async () => {
   return {
     rootDir: __dirname,
+    testEnvironment: 'jsdom',
     transform: {
       '^.+\\.(ts|tsx)$': 'ts-jest'
     },

@@ -9,3 +9,5 @@ updates:
     ignore:
       - dependency-name: 'pixi.js'
         versions: ['*']
+      - dependency-name: '@pixi/sound'
+        versions: ['*']
