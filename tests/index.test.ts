@@ -1,4 +1,11 @@
-import { Button, Pixi, PixiSound, WebFontLoader } from '../src/index';
+import {
+  Button,
+  Pixi,
+  PixiSound,
+  Scene,
+  SceneManager,
+  WebFontLoader
+} from '../src/index';
 
 describe('Test index.ts', () => {
   /**
@@ -41,7 +48,15 @@ describe('Test index.ts', () => {
   /**
    * gameforge classes
    */
-  it('should export Button class', () => {
+  it('should export ui/Button class', () => {
     expect(Button).toBeTruthy();
+  });
+
+  it('should export ui/Scene class', () => {
+    expect(Scene).toBeTruthy();
+  });
+
+  it('should export ui/SceneManager class', () => {
+    expect(SceneManager).toBeTruthy();
   });
 });
