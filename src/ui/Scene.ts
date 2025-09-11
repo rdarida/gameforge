@@ -6,7 +6,7 @@ import { ArgumentMap } from 'eventemitter3';
  */
 export class Scene extends Container {
   /**
-   * Creates a new scene instance with the given name.
+   * Creates a new Scene instance with the given name.
    *
    * @param name The name of the scene.
    */

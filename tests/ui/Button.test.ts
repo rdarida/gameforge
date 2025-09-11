@@ -9,6 +9,10 @@ describe('Test Button class', () => {
     button = new Button(new Texture(new BaseTexture()));
   });
 
+  it('should be truthy', () => {
+    expect(button).toBeTruthy();
+  });
+
   it('should disable the button', () => {
     expect(button.eventMode).toBe('static');
 
