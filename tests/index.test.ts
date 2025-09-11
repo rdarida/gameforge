@@ -1,5 +1,6 @@
 import {
   Button,
+  Panel,
   Pixi,
   PixiSound,
   Scene,
@@ -48,15 +49,19 @@ describe('Test index.ts', () => {
   /**
    * gameforge classes
    */
-  it('should export ui/Button class', () => {
+  it('should export scene/Button class', () => {
     expect(Button).toBeTruthy();
   });
 
-  it('should export ui/Scene class', () => {
+  it('should export scene/Panel class', () => {
+    expect(Panel).toBeTruthy();
+  });
+
+  it('should export scene/Scene class', () => {
     expect(Scene).toBeTruthy();
   });
 
-  it('should export ui/SceneManager class', () => {
+  it('should export scene/SceneManager class', () => {
     expect(SceneManager).toBeTruthy();
   });
 });
