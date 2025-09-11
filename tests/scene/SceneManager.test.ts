@@ -1,7 +1,7 @@
 import { Container } from 'pixi.js';
 
-import { SceneManager } from '../../src/ui/SceneManager';
-import { Scene } from '../../src/ui/Scene';
+import { SceneManager } from '../../src/scene/SceneManager';
+import { Scene } from '../../src/scene/Scene';
 
 describe('Test SceneManager class', () => {
   let stage: Container;

@@ -1,4 +1,4 @@
-import { Scene } from '../../src/ui/Scene';
+import { Scene } from '../../src/scene/Scene';
 
 describe('Test Scene class', () => {
   let scene: Scene;
