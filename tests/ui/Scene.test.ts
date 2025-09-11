@@ -1,6 +1,6 @@
 import { Scene } from '../../src/ui/Scene';
 
-describe('Test Button class', () => {
+describe('Test Scene class', () => {
   let scene: Scene;
 
   beforeEach(() => {

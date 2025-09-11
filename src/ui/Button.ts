@@ -5,7 +5,7 @@ import { Sprite, Texture } from 'pixi.js';
  */
 export class Button extends Sprite {
   /**
-   * Creates a new button instance with the given texture.
+   * Creates a new Button instance with the given texture.
    *
    * @param texture The texture to be used for the button sprite.
    */
