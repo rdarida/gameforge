@@ -1,6 +1,6 @@
 import { BaseTexture, Texture } from 'pixi.js';
 
-import { Button } from '../src/ui/Button';
+import { Button } from '../../src/ui/Button';
 
 describe('Test Button class', () => {
   let button: Button;
