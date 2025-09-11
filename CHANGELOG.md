@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/rdarida/gameforge/compare/v0.1.9...v0.1.10) (2025-09-11)
+
+
+### Features
+
+* implement Panel class ([0bb859c](https://github.com/rdarida/gameforge/commit/0bb859c2fa2a2da4001dd05fc4279690b48cb848))
+
 ### [0.1.9](https://github.com/rdarida/gameforge/compare/v0.1.8...v0.1.9) (2025-09-11)
 
 ### [0.1.8](https://github.com/rdarida/gameforge/compare/v0.1.7...v0.1.8) (2025-09-11)

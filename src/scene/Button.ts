@@ -17,7 +17,7 @@ export class Button extends Sprite {
   }
 
   /**
-   * Disable the button, preventing it from receiving pointer events.
+   * Disables the button, preventing it from receiving pointer events.
    *
    * @param hide If set to `true`, the button will also be hidden.
    *             Defaults to `false`, meaning the button stays visible.
