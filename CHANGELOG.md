@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/rdarida/gameforge/compare/v0.1.5...v0.1.6) (2025-09-11)
+
+
+### Features
+
+* implement disable end enable methods for Button class ([f9593b3](https://github.com/rdarida/gameforge/commit/f9593b3a7aef2c26423601cfb3823a70577f9cd9))
+
 ### [0.1.5](https://github.com/rdarida/gameforge/compare/v0.1.4...v0.1.5) (2025-09-06)
 
 
