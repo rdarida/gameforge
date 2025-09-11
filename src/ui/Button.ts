@@ -1,7 +1,7 @@
 import { Sprite, Texture } from 'pixi.js';
 
 /**
- * A simple button implementation based on Pixi.Sprite.
+ * A simple button implementation based on `Pixi.Sprite`.
  */
 export class Button extends Sprite {
   /**
