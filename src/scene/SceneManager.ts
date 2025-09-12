@@ -6,9 +6,9 @@ import type { Scene } from './Scene';
  * Managers scenes within a Pixi stage.
  */
 export class SceneManager {
-  private readonly stage: Container;
-  private readonly scenes: Map<string, Scene>;
-  private current?: Scene;
+  private readonly _stage: Container;
+  private readonly _scenes: Map<string, Scene>;
+  private _current?: Scene;
 
   /**
    * Creates a new SceneManager instance.
@@ -16,8 +16,8 @@ export class SceneManager {
    * @param stage The root display container of the application.
    */
   constructor(stage: Container) {
-    this.stage = stage;
-    this.scenes = new Map<string, Scene>();
+    this._stage = stage;
+    this._scenes = new Map<string, Scene>();
   }
 
   /**
@@ -26,12 +26,12 @@ export class SceneManager {
    * @param scene The scene instance to add.
    */
   public addScene(scene: Scene): void {
-    this.stage.addChild(scene);
-    this.scenes.set(scene.name!, scene);
+    this._stage.addChild(scene);
+    this._scenes.set(scene.name!, scene);
 
     scene.on('sceneevent', sceneName => this.setScene(sceneName));
 
-    if (!this.current) {
+    if (!this._current) {
       this.setScene(scene.name!);
       return;
     }
@@ -45,14 +45,14 @@ export class SceneManager {
    * @param name The name of the scene to activate.
    */
   public setScene(name: string): void {
-    this.current?.onExit();
+    this._current?.onExit();
 
-    this.current = this.scenes.get(name);
+    this._current = this._scenes.get(name);
 
-    if (!this.current) {
+    if (!this._current) {
       throw new Error(`Scene with name "${name}" does not exist.`);
     }
 
-    this.current.onEnter();
+    this._current.onEnter();
   }
 }
