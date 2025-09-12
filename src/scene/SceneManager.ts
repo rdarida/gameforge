@@ -7,7 +7,7 @@ import type { Scene } from './Scene';
  */
 export class SceneManager {
   private readonly stage: Container;
-  private readonly scenes: { [key: string]: Scene };
+  private readonly scenes: Map<string, Scene>;
   private current?: Scene;
 
   /**
@@ -17,7 +17,7 @@ export class SceneManager {
    */
   constructor(stage: Container) {
     this.stage = stage;
-    this.scenes = {};
+    this.scenes = new Map<string, Scene>();
   }
 
   /**
@@ -27,7 +27,7 @@ export class SceneManager {
    */
   public addScene(scene: Scene): void {
     this.stage.addChild(scene);
-    this.scenes[scene.name!] = scene;
+    this.scenes.set(scene.name!, scene);
 
     scene.on('sceneevent', sceneName => this.setScene(sceneName));
 
@@ -47,8 +47,12 @@ export class SceneManager {
   public setScene(name: string): void {
     this.current?.onExit();
 
-    // TODO: undefined check
-    this.current = this.scenes[name];
+    this.current = this.scenes.get(name);
+
+    if (!this.current) {
+      throw new Error(`Scene with name "${name}" does not exist.`);
+    }
+
     this.current.onEnter();
   }
 }
