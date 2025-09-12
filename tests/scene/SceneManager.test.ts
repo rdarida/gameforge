@@ -44,6 +44,11 @@ describe('Test SceneManager class', () => {
     expect(scene1.visible).toBe(false);
     expect(scene2.visible).toBe(true);
 
+    scene2.emit('sceneevent', 'scene1');
+
+    expect(scene1.visible).toBe(true);
+    expect(scene2.visible).toBe(false);
+
     expect(() => sm.setScene('nonexistent_scene')).toThrow(
       'Scene with name "nonexistent_scene" does not exist.'
     );
