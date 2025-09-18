@@ -1,5 +1,6 @@
 import { Container } from 'pixi.js';
 
+import { SceneEvent } from '../events';
 import type { Scene } from './Scene';
 
 /**
@@ -29,7 +30,7 @@ export class SceneManager {
     this._stage.addChild(scene);
     this._scenes.set(scene.name!, scene);
 
-    scene.on('sceneevent', sceneName => this.setScene(sceneName));
+    scene.on(SceneEvent.EVENT, sceneName => this.setScene(sceneName));
 
     if (!this._current) {
       this.setScene(scene.name!);

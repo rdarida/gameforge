@@ -4,6 +4,7 @@ import {
   Pixi,
   PixiSound,
   Scene,
+  SceneEvent,
   SceneManager,
   WebFontLoader
 } from '../src/index';
@@ -49,6 +50,10 @@ describe('Test index.ts', () => {
   /**
    * gameforge classes
    */
+  it('should export events/SceneEvent enum', () => {
+    expect(SceneEvent).toBeTruthy();
+  });
+
   it('should export scene/Button class', () => {
     expect(Button).toBeTruthy();
   });

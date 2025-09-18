@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.13](https://github.com/rdarida/gameforge/compare/v0.1.12...v0.1.13) (2025-09-18)
+
+
+### Features
+
+* use SceneEvent instead of 'sceneevent' string ([66fc8ff](https://github.com/rdarida/gameforge/commit/66fc8ffc468f487f5dcc5b3fba19e35204513e53))
+
 ### [0.1.12](https://github.com/rdarida/gameforge/compare/v0.1.11...v0.1.12) (2025-09-12)
 
 ### [0.1.11](https://github.com/rdarida/gameforge/compare/v0.1.10...v0.1.11) (2025-09-12)
