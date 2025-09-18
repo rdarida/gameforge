@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.15](https://github.com/rdarida/gameforge/compare/v0.1.14...v0.1.15) (2025-09-18)
+
+
+### Features
+
+* implement MathUtil.shuffle function ([63c0cbc](https://github.com/rdarida/gameforge/commit/63c0cbc322ea0a1b440aaea2046a3bffd297db95))
+
 ### [0.1.14](https://github.com/rdarida/gameforge/compare/v0.1.13...v0.1.14) (2025-09-18)
 
 

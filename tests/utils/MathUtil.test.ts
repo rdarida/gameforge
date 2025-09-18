@@ -29,23 +29,39 @@ describe('Test MathUtil functions', () => {
     expect(actual).toBe(5);
   });
 
-  it('', () => {
-    let actual = MathUtil.lerp(-5, 5, -0.99);
-    expect(actual).toBe(-5);
+  it('should interpolate between two numbers', () => {
+    let actual = MathUtil.lerp(-5, 5, -0.01);
+    expect(actual).toBe(-5.1);
 
     actual = MathUtil.lerp(-5, 5, 0.5);
     expect(actual).toBe(0);
 
     actual = MathUtil.lerp(-5, 5, 1.01);
-    expect(actual).toBe(5);
+    expect(actual).toBe(5.1);
 
-    actual = MathUtil.lerp(5, -5, -0.99);
-    expect(actual).toBe(5);
+    actual = MathUtil.lerp(5, -5, -0.01);
+    expect(actual).toBe(5.1);
 
     actual = MathUtil.lerp(5, -5, 0.5);
     expect(actual).toBe(0);
 
     actual = MathUtil.lerp(5, -5, 1.01);
-    expect(actual).toBe(-5);
+    expect(actual).toBe(-5.1);
+  });
+
+  it('should shuffle an array of numbers', () => {
+    const mockRandomValues = [0.75, 0.5, 0.25, 0.0];
+    let callCount = 0;
+
+    jest.spyOn(Math, 'random').mockImplementation(() => {
+      const val = mockRandomValues[callCount % mockRandomValues.length];
+      callCount++;
+      return val;
+    });
+
+    const actual = MathUtil.shuffle([1, 2, 3, 4, 5]);
+    expect(actual).toStrictEqual([2, 5, 1, 3, 4]);
+
+    (Math.random as jest.Mock).mockRestore();
   });
 });

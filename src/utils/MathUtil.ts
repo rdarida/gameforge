@@ -24,13 +24,28 @@ export function clamp(value: number, min = 0, max = 1): number {
 
 /**
  * Linearly interpolates between two numbers.
- * The interpolation `factor` is clamped to [0, 1].
  *
  * @param start The start value.
  * @param end The end value.
- * @param factor The interpolation factor (0 = start, 1 = end).
+ * @param t The interpolation factor.
  * @returns The interpolated value.
  */
-export function lerp(start: number, end: number, factor: number): number {
-  return start + (end - start) * clamp(factor);
+export function lerp(start: number, end: number, t: number): number {
+  return start + (end - start) * t;
+}
+
+/**
+ * Randomly shuffles the elements of an array in place using the
+ * [Fisher–Yates algorithm](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).
+ *
+ * @param array The array to shuffle.
+ * @returns The same array, shuffled in place.
+ */
+export function shuffle<T>(array: T[]): T[] {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  return array;
 }
