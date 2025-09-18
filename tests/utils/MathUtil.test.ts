@@ -28,4 +28,24 @@ describe('Test MathUtil functions', () => {
     actual = MathUtil.clamp(6, -5, 5);
     expect(actual).toBe(5);
   });
+
+  it('', () => {
+    let actual = MathUtil.lerp(-5, 5, -0.99);
+    expect(actual).toBe(-5);
+
+    actual = MathUtil.lerp(-5, 5, 0.5);
+    expect(actual).toBe(0);
+
+    actual = MathUtil.lerp(-5, 5, 1.01);
+    expect(actual).toBe(5);
+
+    actual = MathUtil.lerp(5, -5, -0.99);
+    expect(actual).toBe(5);
+
+    actual = MathUtil.lerp(5, -5, 0.5);
+    expect(actual).toBe(0);
+
+    actual = MathUtil.lerp(5, -5, 1.01);
+    expect(actual).toBe(-5);
+  });
 });
