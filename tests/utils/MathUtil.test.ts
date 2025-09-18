@@ -8,4 +8,24 @@ describe('Test MathUtil functions', () => {
     actual = MathUtil.round(Math.PI, 2);
     expect(actual).toBe(3.14);
   });
+
+  it('should clamp a number to the default or a custom range', () => {
+    let actual = MathUtil.clamp(-1);
+    expect(actual).toBe(0);
+
+    actual = MathUtil.clamp(0.5);
+    expect(actual).toBe(0.5);
+
+    actual = MathUtil.clamp(2);
+    expect(actual).toBe(1);
+
+    actual = MathUtil.clamp(-6, -5, 5);
+    expect(actual).toBe(-5);
+
+    actual = MathUtil.clamp(0, -5, 5);
+    expect(actual).toBe(0);
+
+    actual = MathUtil.clamp(6, -5, 5);
+    expect(actual).toBe(5);
+  });
 });
