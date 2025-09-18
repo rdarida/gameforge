@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.14](https://github.com/rdarida/gameforge/compare/v0.1.13...v0.1.14) (2025-09-18)
+
+
+### Features
+
+* implement MathUtil.clamp function ([7179d51](https://github.com/rdarida/gameforge/commit/7179d51ba00e62c99a2cd978a45a3b789c18d049))
+* implement MathUtil.lerp function ([0617de2](https://github.com/rdarida/gameforge/commit/0617de2be0c5ca129ed4efaa7079cf6fbe0a1708))
+* implement MathUtil.round function ([6379cdf](https://github.com/rdarida/gameforge/commit/6379cdf66732b12fe825d2b63640210b20e79794))
+
 ### [0.1.13](https://github.com/rdarida/gameforge/compare/v0.1.12...v0.1.13) (2025-09-18)
 
 
