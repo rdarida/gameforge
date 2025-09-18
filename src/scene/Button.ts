@@ -1,16 +1,16 @@
-import { Sprite, Texture } from 'pixi.js';
+import { AnimatedSprite, Texture } from 'pixi.js';
 
 /**
- * A simple button implementation based on `Pixi.Sprite`.
+ * A simple button implementation based on `Pixi.AnimatedSprite`.
  */
-export class Button extends Sprite {
+export class Button extends AnimatedSprite {
   /**
-   * Creates a new Button instance with the given texture.
+   * Creates a new Button instance with the given textures.
    *
-   * @param texture The texture to be used for the button sprite.
+   * @param textures The textures to be used for the button.
    */
-  constructor(texture: Texture) {
-    super(texture);
+  constructor(...textures: Texture[]) {
+    super(textures);
 
     this.eventMode = 'static';
     this.cursor = 'pointer';
