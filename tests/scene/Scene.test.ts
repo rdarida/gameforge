@@ -1,3 +1,4 @@
+import { SceneEvent } from '../../src/events/SceneEvent';
 import { Scene } from '../../src/scene/Scene';
 
 describe('Test Scene class', () => {
@@ -17,8 +18,8 @@ describe('Test Scene class', () => {
       expect(action).toBe('testAction');
     };
 
-    scene.on('sceneevent', listener);
-    scene.emit('sceneevent', 'testAction');
+    scene.on(SceneEvent.EVENT, listener);
+    scene.emit(SceneEvent.EVENT, 'testAction');
   });
 
   it('should make the scene visible when onEnter is called', () => {

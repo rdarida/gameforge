@@ -1,5 +1,6 @@
 import { Container } from 'pixi.js';
 
+import { SceneEvent } from '../../src/events/SceneEvent';
 import { SceneManager } from '../../src/scene/SceneManager';
 import { Scene } from '../../src/scene/Scene';
 
@@ -44,7 +45,7 @@ describe('Test SceneManager class', () => {
     expect(scene1.visible).toBe(false);
     expect(scene2.visible).toBe(true);
 
-    scene2.emit('sceneevent', 'scene1');
+    scene2.emit(SceneEvent.EVENT, 'scene1');
 
     expect(scene1.visible).toBe(true);
     expect(scene2.visible).toBe(false);

@@ -1,6 +1,8 @@
 import { Container, DisplayObjectEvents } from 'pixi.js';
 import { ArgumentMap } from 'eventemitter3';
 
+import { SceneEvent } from '../events';
+
 /**
  * A simple scene implementation based on `Pixi.Container`.
  */
@@ -19,10 +21,10 @@ export class Scene extends Container {
   /**
    * @override
    * Add a listener for a given event.
-   * Supports the custom `sceneevent`.
+   * Supports the custom SceneEvent.CHANGE.
    */
   public override on(
-    event: keyof DisplayObjectEvents | 'sceneevent',
+    event: keyof DisplayObjectEvents | SceneEvent.EVENT,
     fn: (...args: any) => void,
     context?: any
   ): this {
@@ -32,10 +34,10 @@ export class Scene extends Container {
   /**
    * @override
    * Calls each of the listeners registered for a given event.
-   * Supports the custom `sceneevent`.
+   * Supports the custom SceneEvent.CHANGE.
    */
   public override emit<T extends keyof DisplayObjectEvents>(
-    event: T | 'sceneevent',
+    event: T | SceneEvent.EVENT,
     ...args: ArgumentMap<DisplayObjectEvents>[Extract<
       T,
       keyof DisplayObjectEvents
