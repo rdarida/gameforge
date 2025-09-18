@@ -1,5 +1,6 @@
 import {
   Button,
+  MathUtil,
   Panel,
   Pixi,
   PixiSound,
@@ -68,5 +69,9 @@ describe('Test index.ts', () => {
 
   it('should export scene/SceneManager class', () => {
     expect(SceneManager).toBeTruthy();
+  });
+
+  it('should export utils/MathUtil', () => {
+    expect(MathUtil).toBeTruthy();
   });
 });
