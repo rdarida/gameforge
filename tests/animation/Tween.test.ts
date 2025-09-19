@@ -46,8 +46,7 @@ describe('Test Tween class', () => {
 
     const ticker = new Ticker();
 
-    const tw = new Tween({ ticker })
-      .setTarget(target)
+    const tw = new Tween({ target, ticker })
       .setDuration(800)
       .setDelay(200)
       .onComplete(() => {

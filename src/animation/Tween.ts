@@ -21,7 +21,7 @@ const defaultTweenConfig: TweenConfig<any> = {
   ticker: Ticker.shared
 };
 
-export class Tween<T extends Record<string, number>> {
+export class Tween<T> {
   private _target: T;
   private _duration: number;
   private _delay: number;
@@ -95,7 +95,14 @@ export class Tween<T extends Record<string, number>> {
   }
 
   public animate<K extends keyof T>(property: K, endValue: number): this {
-    if (!(property in this._target)) return this;
+    if (
+      !this._target ||
+      typeof this._target !== 'object' ||
+      !(property in this._target) ||
+      typeof this._target[property] !== 'number'
+    ) {
+      return this;
+    }
 
     this._startValues.set(property as string, this._target[property]);
     this._endValues.set(property as string, endValue);
