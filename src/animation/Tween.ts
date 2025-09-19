@@ -3,15 +3,39 @@ import { Ticker, TickerCallback } from 'pixi.js';
 import { MathUtil } from '../utils';
 import { Transition, Transitions } from './Transition';
 
+/**
+ * Configuration object for the Tween class.
+ */
 export type TweenConfig<T> = {
+  /**
+   * The target object.
+   */
   target: T;
+  /**
+   * Duration of the tween in milliseconds.
+   */
   duration: number;
+  /**
+   * Delay in milliseconds before the tween starts.
+   */
   delay: number;
+  /**
+   * Easing/transition function.
+   */
   transition: Transition;
+  /**
+   * Callback when tween finishes.
+   */
   onComplete: () => void;
+  /**
+   * PixiJS's Ticker used for updates.
+   */
   ticker: Ticker;
 };
 
+/**
+ * Default tween configuration.
+ */
 const defaultTweenConfig: TweenConfig<any> = {
   target: {},
   duration: 0,
@@ -21,6 +45,10 @@ const defaultTweenConfig: TweenConfig<any> = {
   ticker: Ticker.shared
 };
 
+/**
+ * A generic tweening class that animates numeric properties
+ * of an object over time using PixiJS's Ticker.
+ */
 export class Tween<T> {
   private _target: T;
   private _duration: number;
@@ -53,6 +81,10 @@ export class Tween<T> {
     return this._isComplete;
   }
 
+  /**
+   * Creates a new Tween instance with optional configuration.
+   * @param config The tween's configuration.
+   */
   constructor(config?: Partial<TweenConfig<T>>) {
     ({
       target: this._target,
@@ -94,6 +126,11 @@ export class Tween<T> {
     return this;
   }
 
+  /**
+   * Adds an animation for a specific numeric property of the target.
+   * @param property The property key to animate.
+   * @param endValue The final value for the property.
+   */
   public animate<K extends keyof T>(property: K, endValue: number): this {
     if (
       !this._target ||
@@ -110,6 +147,9 @@ export class Tween<T> {
     return this;
   }
 
+  /**
+   * Starts the tween animation.
+   */
   public play<K extends keyof T>(): void {
     this._startValues.forEach((value, property) => {
       this._target[property as K] = value as T[K];
@@ -121,6 +161,10 @@ export class Tween<T> {
     this._ticker.add(this.update);
   }
 
+  /**
+   * Stops the tween immediately, sets target properties to end values,
+   * and calls the completion callback.
+   */
   public stop<K extends keyof T>(): void {
     this._ticker.remove(this.update);
 
@@ -133,6 +177,10 @@ export class Tween<T> {
     this._onComplete();
   }
 
+  /**
+   * Update function called on every ticker frame.
+   * Handles time progression, easing, and property interpolation.
+   */
   private update: TickerCallback<this> = <K extends keyof T>(): void => {
     this._elapsedTime += this._ticker.deltaMS;
 
@@ -152,6 +200,11 @@ export class Tween<T> {
     }
   };
 
+  /**
+   * Merges user-provided configuration with defaults.
+   * @param config The user-provided configuration.
+   * @returns The merged configuration.
+   */
   private static parseConfig<P>(
     config?: Partial<TweenConfig<P>>
   ): TweenConfig<P> {
