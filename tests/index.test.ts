@@ -7,6 +7,8 @@ import {
   Scene,
   SceneEvent,
   SceneManager,
+  Transitions,
+  Tween,
   WebFontLoader
 } from '../src/index';
 
@@ -51,6 +53,14 @@ describe('Test index.ts', () => {
   /**
    * gameforge classes
    */
+  it('should export animation/Transitions const', () => {
+    expect(Transitions).toBeTruthy();
+  });
+
+  it('should export animation/Tween class', () => {
+    expect(Tween).toBeTruthy();
+  });
+
   it('should export events/SceneEvent enum', () => {
     expect(SceneEvent).toBeTruthy();
   });

@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.17](https://github.com/rdarida/gameforge/compare/v0.1.16...v0.1.17) (2025-09-19)
+
+
+### Features
+
+* implement Tween class ([cac2e90](https://github.com/rdarida/gameforge/commit/cac2e906c5241edd2fe5852d2312ab43ae6fec92))
+
+
+### Bug Fixes
+
+* remove Record from generic type declaration ([7e7c49d](https://github.com/rdarida/gameforge/commit/7e7c49d55303e2821360e0787d6fb3d54d3a5a2f))
+
 ### [0.1.16](https://github.com/rdarida/gameforge/compare/v0.1.15...v0.1.16) (2025-09-18)
 
 ### [0.1.15](https://github.com/rdarida/gameforge/compare/v0.1.14...v0.1.15) (2025-09-18)
