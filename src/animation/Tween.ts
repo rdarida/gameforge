@@ -61,28 +61,44 @@ export class Tween<T> {
   private _elapsedTime: number;
   private _isComplete: boolean;
 
+  /**
+   * Gets the object being animated by the tween.
+   */
   public get target(): T {
     return this._target;
   }
 
+  /**
+   * Gets the duration of the tween.
+   */
   public get duration(): number {
     return this._duration;
   }
 
+  /**
+   * Gets the delay before the tween starts.
+   */
   public get delay(): number {
     return this._delay;
   }
 
+  /**
+   * Gets the easing/transtion function of the tween.
+   */
   public get transition(): Transition {
     return this._transition;
   }
 
+  /**
+   * Indicates whether the tween has finished playing.
+   */
   public get isComplete(): boolean {
     return this._isComplete;
   }
 
   /**
    * Creates a new Tween instance with optional configuration.
+   *
    * @param config The tween's configuration.
    */
   constructor(config?: Partial<TweenConfig<T>>) {
@@ -101,26 +117,56 @@ export class Tween<T> {
     this._isComplete = false;
   }
 
+  /**
+   * Sets the target object to be animated by the tween.
+   *
+   * @param target The object to animate.
+   * @returns The current Tween instance for chaining.
+   */
   public setTarget(target: T): this {
     this._target = target;
     return this;
   }
 
+  /**
+   * Sets the total duration of the tween.
+   *
+   * @param duration Duration in milliseconds.
+   * @returns The current Tween instance for chaining.
+   */
   public setDuration(duration: number): this {
     this._duration = duration;
     return this;
   }
 
+  /**
+   * Sets the delay before the tween starts.
+   *
+   * @param delay Delay in milliseconds.
+   * @returns The current Tween instance for chaining.
+   */
   public setDelay(delay: number): this {
     this._delay = delay;
     return this;
   }
 
+  /**
+   * Sets the easing/transition function of the tween.
+   *
+   * @param transition The easing/transition function.
+   * @returns The current Tween instance for chaining.
+   */
   public setTransition(transition: Transition): this {
     this._transition = transition;
     return this;
   }
 
+  /**
+   * Sets a callback of the tween.
+   *
+   * @param onComplete A function to call when the tween finishes
+   * @returns The current Tween instance for chaining.
+   */
   public onComplete(onComplete: () => void): this {
     this._onComplete = onComplete;
     return this;
@@ -128,6 +174,7 @@ export class Tween<T> {
 
   /**
    * Adds an animation for a specific numeric property of the target.
+   *
    * @param property The property key to animate.
    * @param endValue The final value for the property.
    */
@@ -202,6 +249,7 @@ export class Tween<T> {
 
   /**
    * Merges user-provided configuration with defaults.
+   *
    * @param config The user-provided configuration.
    * @returns The merged configuration.
    */
