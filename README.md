@@ -32,7 +32,31 @@ or learning the basics of game development, gameforge lets you focus on creating
 gameplay mechanics and experimenting with ideas.
 
 ## Installation
-TBD
+
+```shell
+npm i gameforge
+```
+
+<hr>
+
+## Used Libraries
+
+### [pixi.js@7.4](https://www.npmjs.com/package/pixi.js)
+
+PixiJS is the fastest, most lightweight 2D library available for the web, working
+across all devices and allowing you to create rich, interactive graphics and
+cross-platform applications using WebGL and WebGPU.
+
+### [@pixi/sound@5.2](https://www.npmjs.com/package/@pixi/sound)
+
+WebAudio API playback library, with filters. Modern audio playback
+for modern browsers.
+
+### [webfontloader@1.6](https://www.npmjs.com/package/webfontloader)
+
+Web Font Loader gives you added control when using linked fonts via @font-face.
+It provides a common interface to loading fonts regardless of the source, then
+adds a standard set of events you may use to control the loading experience.
 
 <hr>
 

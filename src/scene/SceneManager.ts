@@ -4,7 +4,7 @@ import { SceneEvent } from '../events';
 import type { Scene } from './Scene';
 
 /**
- * Managers scenes within a Pixi stage.
+ * Manages scenes within a Pixi stage.
  */
 export class SceneManager {
   private readonly _stage: Container;
