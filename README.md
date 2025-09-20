@@ -22,7 +22,7 @@
 <hr>
 
 # gameforge
-Lightweight HTML5 boilerplate for quick 2D game prototyping
+Lightweight HTML5 boilerplate for quick 2D game prototyping.
 
 A lightweight HTML5 game development boilerplate designed to streamline the
 prototyping process for simple 2D games. With a minimalistic implementation, it
@@ -36,8 +36,6 @@ gameplay mechanics and experimenting with ideas.
 ```shell
 npm i gameforge
 ```
-
-<hr>
 
 ## Used Libraries
 
@@ -67,6 +65,7 @@ adds a standard set of events you may use to control the loading experience.
 
 - [Documentation](https://rdarida.github.io/gameforge/)
 </details>
+
 <hr>
 
 <p align="center">
