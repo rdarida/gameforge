@@ -31,7 +31,7 @@ export function clamp(value: number, min = 0, max = 1): number {
  * @returns The interpolated value.
  */
 export function lerp(start: number, end: number, t: number): number {
-  return start + (end - start) * t;
+  return (1 - t) * start + t * end;
 }
 
 /**
