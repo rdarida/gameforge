@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.24](https://github.com/rdarida/gameforge/compare/v0.1.23...v0.1.24) (2025-09-23)
+
+
+### Features
+
+* implement PointUtil.qerp function ([4156223](https://github.com/rdarida/gameforge/commit/41562237f0b21a84c78e5b2eb412df6152dcae7f))
+
 ### [0.1.23](https://github.com/rdarida/gameforge/compare/v0.1.22...v0.1.23) (2025-09-23)
 
 
