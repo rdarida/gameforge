@@ -198,9 +198,9 @@ export class Tween<T> {
    * Starts the tween animation.
    */
   public play<K extends keyof T>(): void {
-    this._startValues.forEach((value, property) => {
+    for (const [property, value] of this._startValues) {
       this._target[property as K] = value as T[K];
-    });
+    }
 
     this._elapsedTime = -this._delay;
     this._isComplete = false;
@@ -217,9 +217,9 @@ export class Tween<T> {
 
     this._isComplete = true;
 
-    this._endValues.forEach((value, property) => {
+    for (const [property, value] of this._endValues) {
       this._target[property as K] = value as T[K];
-    });
+    }
 
     this._onComplete();
   }
@@ -236,10 +236,10 @@ export class Tween<T> {
     let ratio = MathUtil.clamp(this._elapsedTime / this._duration);
     ratio = this._transition(ratio);
 
-    this._startValues.forEach((start, property) => {
+    for (const [property, start] of this._startValues) {
       const end = this._endValues.get(property)!;
       this._target[property as K] = MathUtil.lerp(start, end, ratio) as T[K];
-    });
+    }
 
     if (ratio === 1) {
       this._elapsedTime = this._duration;
