@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.25](https://github.com/rdarida/gameforge/compare/v0.1.24...v0.1.25) (2025-09-23)
+
+
+### Features
+
+* implement PointUtil.distance function ([757e0f9](https://github.com/rdarida/gameforge/commit/757e0f984c9f86a9d7f0de387a70c4cc45b72be9))
+
 ### [0.1.24](https://github.com/rdarida/gameforge/compare/v0.1.23...v0.1.24) (2025-09-23)
 
 
