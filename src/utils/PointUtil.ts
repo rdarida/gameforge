@@ -8,8 +8,8 @@ import * as MathUtil from './MathUtil';
  * @param start The start point.
  * @param end The end point.
  * @param t The interpolation factor.
- * @param result A `Point` object to store the result.
- * @returns A new `Point` representing the interpolated position.
+ * @param result A `PIXI.Point` object to store the result.
+ * @returns A new `PIXI.Point` representing the interpolated position.
  */
 export function lerp(
   start: Point,
@@ -34,8 +34,8 @@ export function lerp(
  * @param control The control point.
  * @param end The end point.
  * @param t The interpolation factor.
- * @param result A `Point` object to store the result.
- * @returns A new `Point` representing the interpolated position.
+ * @param result A `PIXI.Point` object to store the result.
+ * @returns A new `PIXI.Point` representing the interpolated position.
  */
 export function qerp(
   start: Point,
