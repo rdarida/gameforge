@@ -55,9 +55,9 @@ export class Tween<T> {
   private _delay: number;
   private _transition: Transition;
   private _onComplete: () => void;
-  private _ticker: Ticker;
-  private _startValues: Map<string, number>;
-  private _endValues: Map<string, number>;
+  private readonly _ticker: Ticker;
+  private readonly _startValues: Map<string, number>;
+  private readonly _endValues: Map<string, number>;
   private _elapsedTime: number;
   private _isComplete: boolean;
 
@@ -228,7 +228,9 @@ export class Tween<T> {
    * Update function called on every ticker frame.
    * Handles time progression, easing, and property interpolation.
    */
-  private update: TickerCallback<this> = <K extends keyof T>(): void => {
+  private readonly update: TickerCallback<this> = <
+    K extends keyof T
+  >(): void => {
     this._elapsedTime += this._ticker.deltaMS;
 
     if (this._elapsedTime < 0) return;

@@ -17,10 +17,7 @@ export function lerp(
   t: number,
   result?: Point
 ): Point {
-  if (!result) {
-    result = new Point();
-  }
-
+  result ??= new Point();
   result.x = MathUtil.lerp(start.x, end.x, t);
   result.y = MathUtil.lerp(start.y, end.y, t);
 
@@ -44,12 +41,22 @@ export function qerp(
   t: number,
   result?: Point
 ): Point {
-  if (!result) {
-    result = new Point();
-  }
-
+  result ??= new Point();
   result.x = MathUtil.qerp(start.x, control.x, end.x, t);
   result.y = MathUtil.qerp(start.y, control.y, end.y, t);
 
   return result;
+}
+
+/**
+ * Calculates the Euclidean distance between two `PIXI.Point` objects.
+ *
+ * @param a The first point.
+ * @param b The second point.
+ * @returns The distance between the two points.
+ */
+export function distance(a: Point, b: Point): number {
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  return Math.sqrt(dx * dx + dy * dy);
 }
