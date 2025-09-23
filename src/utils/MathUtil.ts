@@ -1,5 +1,3 @@
-import { Point } from 'pixi.js';
-
 /**
  * Rounds a number to a specified number of deciamal places.
  *

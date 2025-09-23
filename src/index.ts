@@ -1,8 +1,7 @@
-import * as Pixi from 'pixi.js';
-import * as PixiSound from '@pixi/sound';
-import * as WebFontLoader from 'webfontloader';
+export * as Pixi from 'pixi.js';
+export * as PixiSound from '@pixi/sound';
+export { default as WebFontLoader} from 'webfontloader';
 
-export { Pixi, PixiSound, WebFontLoader };
 export * from './animation';
 export * from './events';
 export * from './scene';

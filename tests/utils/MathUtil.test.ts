@@ -1,4 +1,4 @@
-import { MathUtil } from '../../src/utils';
+import * as MathUtil from '../../src/utils/MathUtil';
 
 describe('Test MathUtil functions', () => {
   it('should round a number to a specified number of deciamal places', () => {

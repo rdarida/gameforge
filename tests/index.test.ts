@@ -4,6 +4,7 @@ import {
   Panel,
   Pixi,
   PixiSound,
+  PointUtil,
   Scene,
   SceneEvent,
   SceneManager,
@@ -83,5 +84,9 @@ describe('Test index.ts', () => {
 
   it('should export utils/MathUtil', () => {
     expect(MathUtil).toBeTruthy();
+  });
+
+  it('should export utils/PointUtil', () => {
+    expect(PointUtil).toBeTruthy();
   });
 });
