@@ -1,3 +1,5 @@
+import { Point } from 'pixi.js';
+
 /**
  * Rounds a number to a specified number of deciamal places.
  *
@@ -23,7 +25,7 @@ export function clamp(value: number, min = 0, max = 1): number {
 }
 
 /**
- * Linearly interpolates between two numbers.
+ * Linear interpolation between two numbers.
  *
  * @param start The start value.
  * @param end The end value.
@@ -32,6 +34,26 @@ export function clamp(value: number, min = 0, max = 1): number {
  */
 export function lerp(start: number, end: number, t: number): number {
   return (1 - t) * start + t * end;
+}
+
+/**
+ * Quadratic interpolation between two numbers.
+ *
+ * Formula: [Quadratic Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_B%C3%A9zier_curves)
+ *
+ * @param start The start value.
+ * @param control The control value.
+ * @param end The end value.
+ * @param t The interpolation factor.
+ * @returns The interpolated value.
+ */
+export function qerp(
+  start: number,
+  control: number,
+  end: number,
+  t: number
+): number {
+  return (1 - t) * (1 - t) * start + 2 * (1 - t) * t * control + t * t * end;
 }
 
 /**

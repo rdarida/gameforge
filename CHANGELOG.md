@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.22](https://github.com/rdarida/gameforge/compare/v0.1.21...v0.1.22) (2025-09-23)
+
+
+### Features
+
+* implement MathUtil.qerp function ([401e0c3](https://github.com/rdarida/gameforge/commit/401e0c3e233e8b80c9dd108347f994f6aca7b89c))
+
 ### [0.1.21](https://github.com/rdarida/gameforge/compare/v0.1.20...v0.1.21) (2025-09-22)
 
 
