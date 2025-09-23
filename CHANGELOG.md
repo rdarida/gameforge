@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.23](https://github.com/rdarida/gameforge/compare/v0.1.22...v0.1.23) (2025-09-23)
+
+
+### Features
+
+* implement PointUtil.lerp function ([322c193](https://github.com/rdarida/gameforge/commit/322c1936b7e467ba1f9c4229c8017fad6157a9ef))
+
 ### [0.1.22](https://github.com/rdarida/gameforge/compare/v0.1.21...v0.1.22) (2025-09-23)
 
 
