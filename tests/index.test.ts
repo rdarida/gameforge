@@ -1,5 +1,6 @@
 import {
   Button,
+  ColorUtil,
   MathUtil,
   Panel,
   Pixi,
@@ -80,6 +81,10 @@ describe('Test index.ts', () => {
 
   it('should export scene/SceneManager class', () => {
     expect(SceneManager).toBeTruthy();
+  });
+
+  it('should export utils/ColorUtil', () => {
+    expect(ColorUtil).toBeTruthy();
   });
 
   it('should export utils/MathUtil', () => {
