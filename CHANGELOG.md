@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.27](https://github.com/rdarida/gameforge/compare/v0.1.26...v0.1.27) (2025-09-27)
+
+
+### Features
+
+* add base classes and some tests ([7feafd8](https://github.com/rdarida/gameforge/commit/7feafd8d05f5db63feb08ca94129ee46c49cb7dc))
+
 ### [0.1.26](https://github.com/rdarida/gameforge/compare/v0.1.25...v0.1.26) (2025-09-27)
 
 
