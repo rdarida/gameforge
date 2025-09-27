@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.26](https://github.com/rdarida/gameforge/compare/v0.1.25...v0.1.26) (2025-09-27)
+
+
+### Features
+
+* implement ColorUtil.interpolate function ([cbec5f4](https://github.com/rdarida/gameforge/commit/cbec5f4f7301cfafd507c4760a23c6f1492132e7))
+
 ### [0.1.25](https://github.com/rdarida/gameforge/compare/v0.1.24...v0.1.25) (2025-09-23)
 
 
