@@ -1,8 +1,8 @@
 import { Binder } from './Binder';
 
-export class List {
-  private readonly _head: Binder;
-  private readonly _tail: Binder;
+export class List<T> {
+  private readonly _first: Binder;
+  private readonly _last: Binder;
   private _size: number;
 
   public get size(): number {
@@ -10,8 +10,8 @@ export class List {
   }
 
   constructor() {
-    this._head = new Binder();
-    this._tail = new Binder();
+    this._first = new Binder();
+    this._last = new Binder();
     this._size = 0;
   }
 }

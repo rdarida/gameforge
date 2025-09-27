@@ -13,4 +13,10 @@ describe('Test Item class', () => {
     expect(item.prev).toBe(item);
     expect(item.next).toBe(item);
   });
+
+  it('should parse a value and return an Item instance', () => {
+    const item = Item.parse('valueToParse');
+    expect(item.data).toBe('valueToParse');
+    expect(item).toStrictEqual(Item.parse(item));
+  });
 });

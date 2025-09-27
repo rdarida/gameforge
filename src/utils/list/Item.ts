@@ -12,4 +12,8 @@ export class Item<T> extends Binder {
 
     this._data = data;
   }
+
+  public static parse<K>(value: K | Item<K>): Item<K> {
+    return value instanceof Item ? value : new Item(value);
+  }
 }
