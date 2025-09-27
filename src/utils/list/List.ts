@@ -1,6 +1,6 @@
 import { Binder } from './Binder';
 
-export class List<T> {
+export class List {
   private readonly _head: Binder;
   private readonly _tail: Binder;
   private _size: number;
