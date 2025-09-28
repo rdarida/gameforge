@@ -48,6 +48,26 @@ export class List<T> {
     }
   }
 
+  public find(element: T): Item<T> | undefined {
+    let item = this.getFirst();
+
+    if (item == undefined) return undefined;
+
+    while (item !== this._tail) {
+      if (item.data === element) {
+        return item;
+      } else {
+        item = item.next as Item<T>;
+      }
+    }
+
+    return undefined;
+  }
+
+  public contains(element: T): boolean {
+    return this.find(element) != undefined;
+  }
+
   private link(prev: Binder, element: T): Item<T> {
     const item = Item.parse(element);
     prev.bind(item);

@@ -62,4 +62,12 @@ describe('Test List class', () => {
     list.clear();
     expect(list.length).toBe(0);
   });
+
+  it('should find the specified element', () => {
+    expect(list.find('toFind')).toBeUndefined();
+
+    const item = list.addFirst('toFind');
+    expect(list.find('toFind')).toBe(item);
+    expect(list.contains('notFound')).toBe(false);
+  });
 });
