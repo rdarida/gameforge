@@ -9,5 +9,6 @@ describe('Test List class', () => {
 
   it('should be truthy', () => {
     expect(list).toBeTruthy();
+    expect(list.length).toBe(0);
   });
 });
