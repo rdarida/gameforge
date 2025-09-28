@@ -92,6 +92,23 @@ describe('Test List class', () => {
     expect(counter).toBe('10214283');
   });
 
+  it('should iterate over all items in order with map', () => {
+    list.push('1');
+    list.push('2');
+    list.push('4');
+    list.push('8');
+
+    const newList = list.map((item, i) => parseInt(item) + i);
+
+    let counter = '';
+
+    newList.forEach(item => {
+      counter += item;
+    });
+
+    expect(counter).toBe('13611');
+  });
+
   it('sould iterate over all items in order', () => {
     const elements = ['one', 'two', 'three'];
 

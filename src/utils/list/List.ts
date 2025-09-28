@@ -135,6 +135,31 @@ export class List<T> {
   }
 
   /**
+   * Calls a defined callback function on each element of a list, and returns
+   * a list that contains the results.
+   *
+   * @param callbackfn A function that accepts up to three arguments. The map
+   * method calls the callbackfn function one time for each element in the list.
+   * @param thisArg An object to which the this keyword can refer in the
+   * callbackfn function. If thisArg is omitted, undefined is used as the this
+   * value.
+   */
+  public map<U>(
+    callbackfn: (value: T, index: number, list: List<T>) => U,
+    thisArg?: any
+  ): List<U> {
+    const list = new List<U>();
+
+    let i = 0;
+
+    for (const item of this) {
+      list.push(callbackfn.call(thisArg, item.data, i++, this));
+    }
+
+    return list;
+  }
+
+  /**
    * Returns an iterator over the list items.
    */
   public *[Symbol.iterator](): IterableIterator<Item<T>> {
