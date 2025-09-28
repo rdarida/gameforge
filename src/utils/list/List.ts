@@ -38,6 +38,10 @@ export class List<T> {
     return this.unlink(this.getFirst());
   }
 
+  public removeLast(): Item<T> | undefined {
+    return this.unlink(this.getLast());
+  }
+
   private link(prev: Binder, element: T): Item<T> {
     const item = Item.parse(element);
     prev.bind(item);

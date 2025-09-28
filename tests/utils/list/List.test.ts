@@ -26,9 +26,11 @@ describe('Test List class', () => {
 
   it('should add a new element to the end of the list', () => {
     list.addLast('lastItem1');
+    expect(list.length).toBe(1);
     expect(list.getLast()?.data).toBe('lastItem1');
 
     list.addLast('lastItem2');
+    expect(list.length).toBe(2);
     expect(list.getLast()?.data).toBe('lastItem2');
   });
 
@@ -37,7 +39,16 @@ describe('Test List class', () => {
 
     list.addFirst('firstItem1');
     const expected = list.addFirst('firstItem2');
-    const actual = list.removeFirst();
-    expect(actual).toBe(expected);
+    expect(list.removeFirst()).toBe(expected);
+    expect(list.length).toBe(1);
+  });
+
+  it('should remove the last element of the list', () => {
+    expect(list.removeLast()).toBeUndefined();
+
+    list.addLast('firstItem1');
+    const expected = list.addLast('firstItem2');
+    expect(list.removeLast()).toBe(expected);
+    expect(list.length).toBe(1);
   });
 });
