@@ -22,8 +22,16 @@ export class List<T> {
     return 0 < this._length ? (this._head.next as Item<T>) : undefined;
   }
 
+  public getLast(): Item<T> | undefined {
+    return 0 < this._length ? (this._tail.prev as Item<T>) : undefined;
+  }
+
   public addFirst(element: T): Item<T> {
     return this.link(this._head, element);
+  }
+
+  public addLast(element: T): Item<T> {
+    return this.link(this._tail.prev, element);
   }
 
   private link(prev: Binder, element: T): Item<T> {
