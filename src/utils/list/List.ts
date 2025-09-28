@@ -2,8 +2,8 @@ import { Binder } from './Binder';
 import { Item } from './Item';
 
 export class List<T> {
-  private readonly _head: Binder;
-  private readonly _tail: Binder;
+  private readonly _first: Binder;
+  private readonly _last: Binder;
   private _length: number;
 
   public get length(): number {
@@ -11,27 +11,27 @@ export class List<T> {
   }
 
   constructor() {
-    this._head = new Binder();
-    this._tail = new Binder();
-    this._head.bind(this._tail);
+    this._first = new Binder();
+    this._last = new Binder();
+    this._first.bind(this._last);
 
     this._length = 0;
   }
 
   public getFirst(): Item<T> | undefined {
-    return 0 < this._length ? (this._head.next as Item<T>) : undefined;
+    return 0 < this._length ? (this._first.next as Item<T>) : undefined;
   }
 
   public getLast(): Item<T> | undefined {
-    return 0 < this._length ? (this._tail.prev as Item<T>) : undefined;
+    return 0 < this._length ? (this._last.prev as Item<T>) : undefined;
   }
 
   public addFirst(element: T): Item<T> {
-    return this.link(this._head, element);
+    return this.link(this._first, element);
   }
 
   public addLast(element: T): Item<T> {
-    return this.link(this._tail.prev, element);
+    return this.link(this._last.prev, element);
   }
 
   public removeFirst(): Item<T> | undefined {
@@ -53,7 +53,7 @@ export class List<T> {
 
     if (item == undefined) return undefined;
 
-    while (item !== this._tail) {
+    while (item !== this._last) {
       if (item.data === element) {
         return item;
       } else {
