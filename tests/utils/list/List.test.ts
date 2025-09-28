@@ -51,4 +51,15 @@ describe('Test List class', () => {
     expect(list.removeLast()).toBe(expected);
     expect(list.length).toBe(1);
   });
+
+  it('should clear the list', () => {
+    for (let i = 0; i < 10; ++i) {
+      list.addFirst(`item${i}`);
+    }
+
+    expect(list.length).toBe(10);
+
+    list.clear();
+    expect(list.length).toBe(0);
+  });
 });

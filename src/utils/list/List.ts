@@ -42,6 +42,12 @@ export class List<T> {
     return this.unlink(this.getLast());
   }
 
+  public clear(): void {
+    while (0 < this.length) {
+      this.removeFirst();
+    }
+  }
+
   private link(prev: Binder, element: T): Item<T> {
     const item = Item.parse(element);
     prev.bind(item);
