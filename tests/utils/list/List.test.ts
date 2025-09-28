@@ -10,5 +10,14 @@ describe('Test List class', () => {
   it('should be truthy', () => {
     expect(list).toBeTruthy();
     expect(list.length).toBe(0);
+    expect(list.getFirst()).toBeUndefined();
+  });
+
+  it('should insert a new element to the beginning of the list', () => {
+    list.addFirst('item0');
+    expect(list.getFirst()?.data).toBe('item0');
+
+    list.addFirst('item1');
+    expect(list.getFirst()?.data).toBe('item1');
   });
 });
