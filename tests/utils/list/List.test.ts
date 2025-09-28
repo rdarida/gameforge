@@ -77,6 +77,21 @@ describe('Test List class', () => {
     expect(list.contains('notFound')).toBe(false);
   });
 
+  it('should iterate over all items in order with forEach', () => {
+    list.push('1');
+    list.push('2');
+    list.push('4');
+    list.push('8');
+
+    let counter = '';
+
+    list.forEach((item, i) => {
+      counter += item + i;
+    });
+
+    expect(counter).toBe('10214283');
+  });
+
   it('sould iterate over all items in order', () => {
     const elements = ['one', 'two', 'three'];
 

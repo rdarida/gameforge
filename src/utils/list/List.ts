@@ -115,6 +115,26 @@ export class List<T> {
   }
 
   /**
+   * Performs the specified action for each element in a list.
+   *
+   * @param callbackfn A function that accepts up to three arguments. forEach calls
+   * the callbackfn function one time for each element in the list.
+   * @param thisArg An object to which the this keyword can refer in the
+   * callbackfn function. If thisArg is omitted, undefined is used as the
+   * this value.
+   */
+  public forEach(
+    callbackfn: (value: T, i: number, list: List<T>) => void,
+    thisArg?: any
+  ): void {
+    let i = 0;
+
+    for (const item of this) {
+      callbackfn.call(thisArg, item.data, i++, this);
+    }
+  }
+
+  /**
    * Returns an iterator over the list items.
    */
   public *[Symbol.iterator](): IterableIterator<Item<T>> {
