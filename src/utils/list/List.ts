@@ -97,16 +97,8 @@ export class List<T> {
    * @returns The matching Item, or `undefined` if not found.
    */
   public find(element: T): Item<T> | undefined {
-    let item = this.first;
-
-    if (item == undefined) return undefined;
-
-    while (item !== this._tail) {
-      if (item.data === element) {
-        return item;
-      } else {
-        item = item.next as Item<T>;
-      }
+    for (const item of this) {
+      if (item.data && item.data === element) return item;
     }
 
     return undefined;
@@ -120,6 +112,18 @@ export class List<T> {
    */
   public contains(element: T): boolean {
     return this.find(element) != undefined;
+  }
+
+  /**
+   * Returns an iterator over the list items.
+   */
+  public *[Symbol.iterator](): IterableIterator<Item<T>> {
+    let current = this.first;
+
+    while (current && current !== this._tail) {
+      yield current;
+      current = current.next as Item<T>;
+    }
   }
 
   private link(prev: Binder, element: T): Item<T> {

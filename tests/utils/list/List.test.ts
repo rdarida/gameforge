@@ -1,4 +1,5 @@
 import { List } from '../../../src/utils/list/List';
+import { Item } from '../../../src/utils/list/Item';
 
 describe('Test List class', () => {
   let list: List<string>;
@@ -12,6 +13,7 @@ describe('Test List class', () => {
     expect(list.length).toBe(0);
     expect(list.first).toBeUndefined();
     expect(list.last).toBeUndefined();
+    expect([...list].length).toBe(0);
   });
 
   it('should add a new element at the beginning of the list', () => {
@@ -22,6 +24,8 @@ describe('Test List class', () => {
     list.unshift('firstItem2');
     expect(list.length).toBe(2);
     expect(list.first?.data).toBe('firstItem2');
+
+    expect([...list].length).toBe(2);
   });
 
   it('should add a new element to the end of the list', () => {
@@ -32,6 +36,8 @@ describe('Test List class', () => {
     list.push('lastItem2');
     expect(list.length).toBe(2);
     expect(list.last?.data).toBe('lastItem2');
+
+    expect([...list].length).toBe(2);
   });
 
   it('should remove the first element of the list', () => {
@@ -69,5 +75,17 @@ describe('Test List class', () => {
     const item = list.unshift('toFind');
     expect(list.find('toFind')).toBe(item);
     expect(list.contains('notFound')).toBe(false);
+  });
+
+  it('sould iterate over all items in order', () => {
+    const elements = ['one', 'two', 'three'];
+
+    elements.forEach(element => list.push(element));
+
+    const items = [...list];
+
+    items.forEach(({ data }, i) => {
+      expect(data).toBe(elements[i]);
+    });
   });
 });
