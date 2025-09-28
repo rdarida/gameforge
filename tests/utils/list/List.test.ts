@@ -14,7 +14,7 @@ describe('Test List class', () => {
     expect(list.getLast()).toBeUndefined();
   });
 
-  it('should insert a new element at the beginning of the list', () => {
+  it('should add a new element at the beginning of the list', () => {
     list.addFirst('firstItem1');
     expect(list.length).toBe(1);
     expect(list.getFirst()?.data).toBe('firstItem1');
@@ -24,11 +24,20 @@ describe('Test List class', () => {
     expect(list.getFirst()?.data).toBe('firstItem2');
   });
 
-  it('should insert a new element to the end of the list', () => {
+  it('should add a new element to the end of the list', () => {
     list.addLast('lastItem1');
     expect(list.getLast()?.data).toBe('lastItem1');
 
     list.addLast('lastItem2');
     expect(list.getLast()?.data).toBe('lastItem2');
+  });
+
+  it('should remove the first element of the list', () => {
+    expect(list.removeFirst()).toBeUndefined();
+
+    list.addFirst('firstItem1');
+    const expected = list.addFirst('firstItem2');
+    const actual = list.removeFirst();
+    expect(actual).toBe(expected);
   });
 });

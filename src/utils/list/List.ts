@@ -34,11 +34,25 @@ export class List<T> {
     return this.link(this._tail.prev, element);
   }
 
+  public removeFirst(): Item<T> | undefined {
+    return this.unlink(this.getFirst());
+  }
+
   private link(prev: Binder, element: T): Item<T> {
     const item = Item.parse(element);
     prev.bind(item);
 
     this._length++;
+
+    return item;
+  }
+
+  private unlink(item: Item<T> | undefined): Item<T> | undefined {
+    if (item == undefined) return undefined;
+
+    item.unbind();
+
+    this._length--;
 
     return item;
   }
