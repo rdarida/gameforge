@@ -10,51 +10,51 @@ describe('Test List class', () => {
   it('should be truthy', () => {
     expect(list).toBeTruthy();
     expect(list.length).toBe(0);
-    expect(list.getFirst()).toBeUndefined();
-    expect(list.getLast()).toBeUndefined();
+    expect(list.first).toBeUndefined();
+    expect(list.last).toBeUndefined();
   });
 
   it('should add a new element at the beginning of the list', () => {
-    list.addFirst('firstItem1');
+    list.unshift('firstItem1');
     expect(list.length).toBe(1);
-    expect(list.getFirst()?.data).toBe('firstItem1');
+    expect(list.first?.data).toBe('firstItem1');
 
-    list.addFirst('firstItem2');
+    list.unshift('firstItem2');
     expect(list.length).toBe(2);
-    expect(list.getFirst()?.data).toBe('firstItem2');
+    expect(list.first?.data).toBe('firstItem2');
   });
 
   it('should add a new element to the end of the list', () => {
-    list.addLast('lastItem1');
+    list.push('lastItem1');
     expect(list.length).toBe(1);
-    expect(list.getLast()?.data).toBe('lastItem1');
+    expect(list.last?.data).toBe('lastItem1');
 
-    list.addLast('lastItem2');
+    list.push('lastItem2');
     expect(list.length).toBe(2);
-    expect(list.getLast()?.data).toBe('lastItem2');
+    expect(list.last?.data).toBe('lastItem2');
   });
 
   it('should remove the first element of the list', () => {
-    expect(list.removeFirst()).toBeUndefined();
+    expect(list.shift()).toBeUndefined();
 
-    list.addFirst('firstItem1');
-    const expected = list.addFirst('firstItem2');
-    expect(list.removeFirst()).toBe(expected);
+    list.unshift('firstItem1');
+    const expected = list.unshift('firstItem2');
+    expect(list.shift()).toBe(expected);
     expect(list.length).toBe(1);
   });
 
   it('should remove the last element of the list', () => {
-    expect(list.removeLast()).toBeUndefined();
+    expect(list.pop()).toBeUndefined();
 
-    list.addLast('firstItem1');
-    const expected = list.addLast('firstItem2');
-    expect(list.removeLast()).toBe(expected);
+    list.push('firstItem1');
+    const expected = list.push('firstItem2');
+    expect(list.pop()).toBe(expected);
     expect(list.length).toBe(1);
   });
 
   it('should clear the list', () => {
     for (let i = 0; i < 10; ++i) {
-      list.addFirst(`item${i}`);
+      list.unshift(`item${i}`);
     }
 
     expect(list.length).toBe(10);
@@ -66,7 +66,7 @@ describe('Test List class', () => {
   it('should find the specified element', () => {
     expect(list.find('toFind')).toBeUndefined();
 
-    const item = list.addFirst('toFind');
+    const item = list.unshift('toFind');
     expect(list.find('toFind')).toBe(item);
     expect(list.contains('notFound')).toBe(false);
   });
