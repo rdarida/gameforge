@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.28](https://github.com/rdarida/gameforge/compare/v0.1.27...v0.1.28) (2025-12-22)
+
+
+### Features
+
+* implement Binder.bind, and Binder.unbind methods ([bf1d77a](https://github.com/rdarida/gameforge/commit/bf1d77a11736c5a19460ae415c4fb5afd73decd4))
+* implement Item.parse static method ([7db6e3d](https://github.com/rdarida/gameforge/commit/7db6e3d30908933081abadbd94c1105819809d94))
+* implement iterator for List class, and simplify List.find method with it ([fed2f2a](https://github.com/rdarida/gameforge/commit/fed2f2aad994de353b3351a422fd1f3438cadddd))
+* implement List.clear method ([a1693fb](https://github.com/rdarida/gameforge/commit/a1693fbbf0e62290807912573a87ef2e641bcb9a))
+* implement List.find and List.contains methods ([bc4e287](https://github.com/rdarida/gameforge/commit/bc4e287ccdab6002222338085e99fdabd1af9333))
+* implement List.forEach method ([275f1c0](https://github.com/rdarida/gameforge/commit/275f1c02ba41e74da365f505b9fe389e65f6e9ad))
+* implement List.getFirst and List.addFirst methods ([86ee345](https://github.com/rdarida/gameforge/commit/86ee3455585c7bfd5d032485fc63a3583b8ed3a8))
+* implement List.getLast and List.addLast methods ([537443c](https://github.com/rdarida/gameforge/commit/537443c11e3ab34c9c652dcd631a46135958a0f9))
+* implement List.map method ([b07ab92](https://github.com/rdarida/gameforge/commit/b07ab92384088889215145ff4482fd6d17d47488))
+* implement List.removeFirst method ([67082b8](https://github.com/rdarida/gameforge/commit/67082b8b88e6826e69995236a3f9147b26d77e18))
+* implement List.removeLast method ([245f56f](https://github.com/rdarida/gameforge/commit/245f56f1b7e4f94308c886f034f5f5c454d617d4))
+
 ### [0.1.27](https://github.com/rdarida/gameforge/compare/v0.1.26...v0.1.27) (2025-09-27)
 
 
