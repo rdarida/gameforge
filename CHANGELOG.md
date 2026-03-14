@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.29](https://github.com/rdarida/gameforge/compare/v0.1.28...v0.1.29) (2026-03-14)
+
+
+### Features
+
+* implement TimeUtil.formatTime function ([3478e97](https://github.com/rdarida/gameforge/commit/3478e976b4f31960104c9417010d0c19b8c01e12))
+
 ### [0.1.28](https://github.com/rdarida/gameforge/compare/v0.1.27...v0.1.28) (2025-12-22)
 
 
