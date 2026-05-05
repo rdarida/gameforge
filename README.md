@@ -21,6 +21,10 @@
 </p>
 <hr>
 
+**Disclaimer:** This project is an independent, open-source TypeScript library
+for educational and prototyping purposes. It is **NOT** associated with Gameforge AG
+or Gameforge 4D GmbH.
+
 # gameforge
 Lightweight HTML5 boilerplate for quick 2D game prototyping.
 
