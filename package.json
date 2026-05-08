@@ -31,7 +31,7 @@
     "pretest": "rimraf ./coverage",
     "test": "jest",
     "prebuild": "rimraf ./dist",
-    "build": "tsup src/index.ts --format cjs,esm --dts --minify",
+    "build": "tsup src/index.ts --format cjs,esm --dts --sourcemap --shims --minify --clean",
     "prepublishOnly": "npm run build",
     "release": "release-it",
     "predocs": "rimraf ./docs",
