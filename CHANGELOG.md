@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.1.35](https://github.com/rdarida/gameforge/compare/v0.1.34...v0.1.35) (2026-05-08)
+
 ## [0.1.34](https://github.com/rdarida/gameforge/compare/v0.1.33...v0.1.34) (2026-05-07)
 
 ## [0.1.33](https://github.com/rdarida/gameforge/compare/v0.1.32...v0.1.33) (2026-05-05)
