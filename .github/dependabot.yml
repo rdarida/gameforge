@@ -11,11 +11,3 @@ updates:
         versions: ['*']
       - dependency-name: '@pixi/sound'
         versions: ['*']
-      - dependency-name: '@types/jest'
-        versions: ['>=30.0.0']
-      - dependency-name: 'jest'
-        versions: ['>=30.0.0']
-      - dependency-name: 'jest-config'
-        versions: ['>=30.0.0']
-      - dependency-name: 'jest-environment-jsdom'
-        versions: ['>=30.0.0']
