@@ -16,11 +16,15 @@
     ".release-it.json": true,
     "CHANGELOG.md": true,
     "favicon.ico": true,
-    "jest.config.js": true,
+    "jest.config.ts": true,
     "LICENSE": true,
     "package-lock.json": true,
     "sonar-project.properties": true,
     "tsup.config.ts": true,
     "typedoc.json": true
+  },
+  "sonarlint.connectedMode.project": {
+    "connectionId": "rdarida",
+    "projectKey": "rdarida_gameforge"
   }
 }
