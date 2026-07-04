@@ -50,6 +50,7 @@ export class Scene extends Container {
    * Lifecycle method called when the scene is entered.
    */
   public onEnter(): void {
+    this.eventMode = 'passive';
     this.visible = true;
   }
 
@@ -57,6 +58,7 @@ export class Scene extends Container {
    * Lifecycle method called when the scene is exited.
    */
   public onExit(): void {
+    this.eventMode = 'none';
     this.visible = false;
   }
 }
