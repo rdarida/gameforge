@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.0](https://github.com/rdarida/gameforge/compare/v0.1.39...v0.2.0) (2026-07-04)
+
+### Features
+
+* enable and disable eventMode for scenes ([e2246e5](https://github.com/rdarida/gameforge/commit/e2246e5279392d7fceb2c62fb3b5bf4df30da0ab))
+
 ## [0.1.39](https://github.com/rdarida/gameforge/compare/v0.1.38...v0.1.39) (2026-06-11)
 
 ## [0.1.38](https://github.com/rdarida/gameforge/compare/v0.1.37...v0.1.38) (2026-06-11)
