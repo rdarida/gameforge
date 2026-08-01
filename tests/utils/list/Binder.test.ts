@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { Binder } from '../../../src/utils/list/Binder';
 
 describe('Test Binder class', () => {

@@ -1,4 +1,5 @@
 import { BaseTexture, Texture } from 'pixi.js';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { Panel } from '../../src/scene/Panel';
 

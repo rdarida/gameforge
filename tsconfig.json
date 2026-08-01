@@ -4,7 +4,6 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable", "ESNext.AsyncIterable"],
     "module": "esnext",
     "moduleResolution": "bundler",
-    "types": ["jest"],
     "resolveJsonModule": true,
     "noEmit": true,
     "esModuleInterop": true,

@@ -1,4 +1,5 @@
 import { Container } from 'pixi.js';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { SceneEvent } from '../../src/events/SceneEvent';
 import { SceneManager } from '../../src/scene/SceneManager';

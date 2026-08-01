@@ -1,6 +1,6 @@
 {
   "name": "gameforge",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Lightweight HTML5 boilerplate for quick 2D game prototyping",
   "keywords": [
     "lightweight",
@@ -29,7 +29,7 @@
     "lint": "tsc",
     "prettier": "prettier . --check",
     "pretest": "rimraf ./coverage",
-    "test": "jest",
+    "test": "vitest",
     "build": "tsup",
     "prepublishOnly": "npm run build",
     "release": "release-it",
@@ -45,15 +45,14 @@
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "^11.0.1",
-    "@types/jest": "^30.0.0",
-    "jest": "^30.4.2",
-    "jest-environment-jsdom": "^30.4.1",
+    "@vitest/coverage-istanbul": "^4.1.10",
+    "jsdom": "^30.0.1",
     "prettier": "^3.6.2",
     "release-it": "^20.2.0",
     "rimraf": "^6.0.1",
-    "ts-jest": "^29.4.11",
     "tsup": "^8.5.1",
     "typedoc": "~0.28.1",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
   }
 }

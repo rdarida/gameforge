@@ -1,5 +1,6 @@
+import { beforeEach, describe, expect, it } from 'vitest';
+
 import { List } from '../../../src/utils/list/List';
-import { Item } from '../../../src/utils/list/Item';
 
 describe('Test List class', () => {
   let list: List<string>;

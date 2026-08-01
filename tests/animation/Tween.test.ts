@@ -1,4 +1,5 @@
 import { Ticker } from 'pixi.js';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { Tween } from '../../src/animation/Tween';
 import { Transitions } from '../../src/animation';

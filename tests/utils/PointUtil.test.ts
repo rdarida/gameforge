@@ -1,4 +1,5 @@
 import { Point } from 'pixi.js';
+import { describe, expect, it } from 'vitest';
 
 import * as PointUtil from '../../src/utils/PointUtil';
 

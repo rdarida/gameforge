@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import { Transitions } from '../../src/animation';
 
 describe('Test Transition functions', () => {

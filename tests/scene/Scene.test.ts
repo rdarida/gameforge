@@ -1,3 +1,5 @@
+import { beforeEach, describe, expect, it } from 'vitest';
+
 import { SceneEvent } from '../../src/events/SceneEvent';
 import { Scene } from '../../src/scene/Scene';
 
