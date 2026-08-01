@@ -1,3 +1,5 @@
+import { describe, expect, it } from 'vitest';
+
 import * as TimeUtil from '../../src/utils/TimeUtil';
 
 describe('Test TimeUtil functions', () => {

@@ -1,4 +1,5 @@
 import { Color } from 'pixi.js';
+import { describe, expect, it } from 'vitest';
 
 import * as ColorUtil from '../../src/utils/ColorUtil';
 
